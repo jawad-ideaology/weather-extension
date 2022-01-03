@@ -1,0 +1,26 @@
+{
+  "name": "Weather App",
+  "version": "0.0.1",
+  "description": "Weather app",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Weather",
+    "default_icon": "ext.png"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "16": "ext.png",
+    "48": "ext.png",
+    "128": "ext.png"
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ]
+}
